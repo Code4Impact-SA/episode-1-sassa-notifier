@@ -27,7 +27,7 @@ class SassaStatusCheck(models.Model):
     """
     application = models.ForeignKey(SassaApplication, on_delete=models.CASCADE, related_name='status_checks')
     status = models.CharField(max_length=255)
-    checked_at = models.DateTimeField(auto_now_add=True)
+    checked_at = models.DateTimeField(auto_now=True)
     outcome_period = models.CharField(max_length=10, null=True, blank=True)
     
     def __str__(self):
